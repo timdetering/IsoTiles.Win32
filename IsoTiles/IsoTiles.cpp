@@ -585,25 +585,25 @@ void PickTile(int x, int y, int &tx, int &ty)
 
 void LoadMap(wchar_t *szFileName)
 {
-    FILE *fp = _wfopen(szFileName, L"w");
-    fprintf(fp, "Map %s\n", m_szName);
+    //FILE *fp = _wfopen(szFileName, L"w");
+    //fprintf(fp, "Map %s\n", m_szName);
 
-    fprintf(fp, "mapsize %d %d \n", m_nXCells, m_nYCells);
-    fprintf(fp, "cellsize %d %d \n", m_nCellWidth, m_nCellHeight);
+    //fprintf(fp, "mapsize %d %d \n", m_nXCells, m_nYCells);
+    //fprintf(fp, "cellsize %d %d \n", m_nCellWidth, m_nCellHeight);
 
-    fprintf(fp, "objects %d \n", m_nNumObjects);
+    //fprintf(fp, "objects %d \n", m_nNumObjects);
 
-    for(int i=0; i<m_nNumObjects; i++)
-    {
-        fprintf(fp, "object \n");
-        fprintf(fp, "bitmap %s \n", m_rgObjects[i].m_szBmpFileName);
-        fprintf(fp, "objectsize %d %d\n", m_rgObjects[i].m_nNumCols, m_rgObjects[i].m_nNumRows);
-        fprintf(fp, "anchor %d %d\n", m_rgObjects[i].m_nAnchorRow, m_rgObjects[i].m_nAnchorCol);
-        fprintf(fp, "offset %d %d\n", m_rgObjects[i].m_nOffsetX, m_rgObjects[i].m_nOffsetY);
-        fprintf(fp, "endobject\n");
-    }
+    //for(int i=0; i<m_nNumObjects; i++)
+    //{
+    //    fprintf(fp, "object \n");
+    //    fprintf(fp, "bitmap %s \n", m_rgObjects[i].m_szBmpFileName);
+    //    fprintf(fp, "objectsize %d %d\n", m_rgObjects[i].m_nNumCols, m_rgObjects[i].m_nNumRows);
+    //    fprintf(fp, "anchor %d %d\n", m_rgObjects[i].m_nAnchorRow, m_rgObjects[i].m_nAnchorCol);
+    //    fprintf(fp, "offset %d %d\n", m_rgObjects[i].m_nOffsetX, m_rgObjects[i].m_nOffsetY);
+    //    fprintf(fp, "endobject\n");
+    //}
 
-    fclose(fp);
+    //fclose(fp);
 }
 
 /*
