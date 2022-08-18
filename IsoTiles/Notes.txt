@@ -1,0 +1,45 @@
+Scrolling
+
+Back to front drawing
+View to Window mapping
+
+How to handle height
+Bitmaps for height transitions
+Sprite locations mapping for heights
+
+Terrain reasoning
+
+For unit movement in grid x coordinates
+screen x += 0.5 * cell diagonal
+screen y -= 1.0 * cell diagonal
+
+
+For unit movement in grid y coordinates
+screen x += 0.5 * cell diagonal
+screen y += 1.0 * cell diagonal
+
+
+Centre of each cell is modelled by a 2D array
+11 grid lines
+1  0.5
+2  1.5
+3  2.5
+4  3.5
+5  4.5
+6  5.5
+7  6.5
+8  7.5
+9  8.5
+10 9.5
+
+(x, y), (x, y+1)
+(x, y+1), (x+1, y+1)
+(x+1, y+1), (x+1, y)
+(x+1, y), (x, y)
+
+for (int y=0; y<numCellY; y++)
+    for (int x=0; x<numCellX; x++)
+    {
+        DrawCell(x, y, type);
+    }
+    
